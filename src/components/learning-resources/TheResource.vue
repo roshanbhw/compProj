@@ -1,0 +1,27 @@
+<template>
+    <base-card>
+        <base-button @click="setSelectedTab('stored-resources')" >Stored Resources<base-button>
+        <base-button @click="setSelectedTab('add-resource')" >Add Resource<base-button>
+    </base-card> 
+    <component :is="selectedTab"></component>   
+</template>
+
+<script>
+
+export default {
+  data() {
+      return {
+          selectedTab: 'stored-resources'          
+    };
+  },
+  methods: {
+      setSelectedTab(tab) {
+          this.setSelectedTab = tab;
+      }
+  }
+}
+</script>
+
+<style>
+
+</style>
