@@ -1,36 +1,37 @@
 <template>
     <the-header title="RememberMe"></the-header>
-    <stored-resources :resources="storedResources"></stored-resources>
+    <the-resources></the-resources>
 </template>
 
 <script>
-import StoredResources from './components/learning-resources/StoredResources.vue';
-import TheHeader from './components/Layouts/TheHeader.vue'
+import TheHeader from './components/Layouts/TheHeader.vue';
+import TheResources from './components/learning-resources/TheResource.vue'
 
 export default {
     components: {
-        StoredResources,
-        TheHeader
+        TheHeader,
+        TheResources
     },
-    data() {
-        return {
-            storedResources: [
-                {
-                    id: 'official-guide',
-                    title: 'Official Guide',
-                    discription: 'The offical Vue.js documentation',
-                    link: 'https://vuejs.org'
-                },
-                {
-                    id: 'google',
-                    title: 'Google',
-                    discription: 'Google to Learn',
-                    link: 'https://google.com'
-                },
+    //data() {
+      //  return {
+            // Moving it to TheResources to use INJECT/PROVIDE.
+            // storedResources: [
+            //     {
+            //         id: 'official-guide',
+            //         title: 'Official Guide',
+            //         discription: 'The offical Vue.js documentation',
+            //         link: 'https://vuejs.org'
+            //     },
+            //     {
+            //         id: 'google',
+            //         title: 'Google',
+            //         discription: 'Google to Learn',
+            //         link: 'https://google.com'
+            //     },
 
-            ],
-        };
-    }
+            // ],
+       // };
+    //}
 }
 
 </script>
