@@ -14,14 +14,16 @@
 import LearningResource from './LearningResource.vue'
 
 export default {
-    props: ['resources'],
+    //Props to fetch/send resources data.
+    //props: ['resources'],
+
+    // privide resources KEY in TheResources,vue 38
+    inject: ['resources'],
+    //register LearningResources.
     components: {
         LearningResource
     }
 }
-
-
-
 
 </script>
 
